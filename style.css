@@ -1,0 +1,11 @@
+h4 { 
+      color: red;
+}
+.hinhnen { 
+      clip-path: polygon(100% 82%, 50% 100%, 0 84%, 0 0, 100% 0);
+      background-color: #ccc;
+}
+img { 
+      margin-left: 50%;
+      transform: translateX(-50%);
+}

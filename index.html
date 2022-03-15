@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+      <title>js-buoi-5</title>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- tailwind -->
+      <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+      <div id="root" class="container">
+            <h3 class="alert alert-success">Bài tập quản lý tuyển sinh</h3>
+            <form action="/action_page.php" class="form-inline" id="element">
+                  <div class="form-group mr-2">
+                        <input type="number" class="form-control" id="diemmon1" placeholder="Nhập điểm môn 1">
+                  </div>
+                  <div class="form-group mr-2">
+                        <input type="number" class="form-control" id="diemmon2" placeholder="Nhập điểm môn 2">
+                  </div>
+                  <div class="form-group mr-2">
+                        <input type="number" class="form-control" id="diemmon3" placeholder="Nhập điểm môn 3">
+                  </div>
+                  <div class="form-group">
+                        <input type="number" class="form-control" id="diemchuan" placeholder="Nhập điểm chuẩn...">
+                  </div>
+                  <div class="form-check" style="margin-top: 16px;">
+                        <h6>Khu vực sinh viên học tập: </h6>
+                        <label style="margin: 0 16px" class="form-check-label">
+                              <input class="form-check-input" type="radio" name="khuvuc" id="khuvuc_a" value="2"> Khu
+                              vực A
+                        </label>
+                        <label style="margin: 0 16px" class="form-check-label">
+                              <input class="form-check-input" type="radio" name="khuvuc" id="khuvuc_b" value="1"> Khu
+                              vực B
+                        </label>
+                        <label style="margin: 0 16px" class="form-check-label">
+                              <input class="form-check-input" type="radio" name="khuvuc" id="khuvuc_c" value="0.5"> Khu
+                              vực C
+                        </label>
+                        <label style="margin: 0 16px" class="form-check-label">
+                              <input class="form-check-input" type="radio" name="khuvuc" id="khuvuc_x" value="0">
+                              Không thuộc khu vực ưu tiên
+                        </label>
+                  </div>
+
+                  <div class="form-check" style="margin-top: 16px;">
+                        <h6>Đối tượng dự thi: </h6>
+                        <label style="margin: 0 16px" class="form-check-label">
+                              <input class="form-check-input" type="radio" name="doituong" id="doituong_1" value="2.5">
+                              Đối tượng 1
+                        </label>
+                        <label style="margin: 0 16px" class="form-check-label">
+                              <input class="form-check-input" type="radio" name="doituong" id="doituong_2" value="1.5">
+                              Đối tượng 2
+                        </label>
+                        <label style="margin: 0 16px" class="form-check-label">
+                              <input class="form-check-input" type="radio" name="doituong" id="doituong_3" value="1">
+                              Đối tượng 3
+                        </label>
+                        <label style="margin: 0 16px" class="form-check-label">
+                              <input class="form-check-input" type="radio" name="doituong" id="doituong_0" value="0">
+                              Không thuộc đối tượng ưu tiên
+                        </label>
+                  </div>
+            </form>
+            <button id="ketquabai1" class="btn btn-success">Kết quả</button> <span id="conten_ketqua"></span>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+      <script src="./main.js"></script>
+</body>
+
+</html>

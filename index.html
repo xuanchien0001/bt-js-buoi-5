@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-      <title>js-buoi-5</title>
+      <title>bt-js-buoi-5</title>
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,74 +16,84 @@
 
 <body>
       <div id="root" class="container">
-            <h3 class="alert alert-success">Bài tập quản lý tuyển sinh</h3>
-            <form action="/action_page.php" class="form-inline" id="element">
-                  <div class="form-group mr-2">
-                        <input type="number" class="form-control" id="diemmon1" placeholder="Nhập điểm môn 1">
-                  </div>
-                  <div class="form-group mr-2">
-                        <input type="number" class="form-control" id="diemmon2" placeholder="Nhập điểm môn 2">
-                  </div>
-                  <div class="form-group mr-2">
-                        <input type="number" class="form-control" id="diemmon3" placeholder="Nhập điểm môn 3">
-                  </div>
-                  <div class="form-group">
-                        <input type="number" class="form-control" id="diemchuan" placeholder="Nhập điểm chuẩn...">
-                  </div>
-                  <div class="form-check" style="margin-top: 16px;">
-                        <h6>Khu vực sinh viên học tập: </h6>
-                        <label style="margin: 0 16px" class="form-check-label">
-                              <input class="form-check-input" type="radio" name="khuvuc" id="khuvuc_a" value="2"> Khu
-                              vực A
-                        </label>
-                        <label style="margin: 0 16px" class="form-check-label">
-                              <input class="form-check-input" type="radio" name="khuvuc" id="khuvuc_b" value="1"> Khu
-                              vực B
-                        </label>
-                        <label style="margin: 0 16px" class="form-check-label">
-                              <input class="form-check-input" type="radio" name="khuvuc" id="khuvuc_c" value="0.5"> Khu
-                              vực C
-                        </label>
-                        <label style="margin: 0 16px" class="form-check-label">
-                              <input class="form-check-input" type="radio" name="khuvuc" id="khuvuc_x" value="0">
-                              Không thuộc khu vực ưu tiên
-                        </label>
-                  </div>
+            <div class="bai_quan_ly_tuyen_sinh">
+                  <h3 class="alert alert-success">Bài tập quản lý tuyển sinh</h3>
+                  <form action="/action_page.php" class="form-inline" id="element">
+                        <div class="form-group mr-2">
+                              <input type="number" class="form-control" id="diemmon1" placeholder="Nhập điểm môn 1">
+                        </div>
+                        <div class="form-group mr-2">
+                              <input type="number" class="form-control" id="diemmon2" placeholder="Nhập điểm môn 2">
+                        </div>
+                        <div class="form-group mr-2">
+                              <input type="number" class="form-control" id="diemmon3" placeholder="Nhập điểm môn 3">
+                        </div>
+                        <div class="form-group">
+                              <input type="number" class="form-control" id="diemchuan" placeholder="Nhập điểm chuẩn...">
+                        </div>
+                        <div class="form-check" style="margin-top: 16px;">
+                              <h6>Khu vực sinh viên học tập: </h6>
+                              <label style="margin: 0 16px" class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="khuvuc" id="khuvuc_a" value="2">
+                                    Khu
+                                    vực A
+                              </label>
+                              <label style="margin: 0 16px" class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="khuvuc" id="khuvuc_b" value="1">
+                                    Khu
+                                    vực B
+                              </label>
+                              <label style="margin: 0 16px" class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="khuvuc" id="khuvuc_c"
+                                          value="0.5"> Khu
+                                    vực C
+                              </label>
+                              <label style="margin: 0 16px" class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="khuvuc" id="khuvuc_x" value="0">
+                                    Không thuộc khu vực ưu tiên
+                              </label>
+                        </div>
 
-                  <div class="form-check" style="margin-top: 16px;">
-                        <h6>Đối tượng dự thi: </h6>
-                        <label style="margin: 0 16px" class="form-check-label">
-                              <input class="form-check-input" type="radio" name="doituong" id="doituong_1" value="2.5">
-                              Đối tượng 1
-                        </label>
-                        <label style="margin: 0 16px" class="form-check-label">
-                              <input class="form-check-input" type="radio" name="doituong" id="doituong_2" value="1.5">
-                              Đối tượng 2
-                        </label>
-                        <label style="margin: 0 16px" class="form-check-label">
-                              <input class="form-check-input" type="radio" name="doituong" id="doituong_3" value="1">
-                              Đối tượng 3
-                        </label>
-                        <label style="margin: 0 16px" class="form-check-label">
-                              <input class="form-check-input" type="radio" name="doituong" id="doituong_0" value="0">
-                              Không thuộc đối tượng ưu tiên
-                        </label>
-                  </div>
-            </form>
-            <button id="ketquabai1" class="btn btn-success">Kết quả</button> <span id="conten_ketqua"></span>
+                        <div class="form-check" style="margin-top: 16px;">
+                              <h6>Đối tượng dự thi: </h6>
+                              <label style="margin: 0 16px" class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="doituong" id="doituong_1"
+                                          value="2.5">
+                                    Đối tượng 1
+                              </label>
+                              <label style="margin: 0 16px" class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="doituong" id="doituong_2"
+                                          value="1.5">
+                                    Đối tượng 2
+                              </label>
+                              <label style="margin: 0 16px" class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="doituong" id="doituong_3"
+                                          value="1">
+                                    Đối tượng 3
+                              </label>
+                              <label style="margin: 0 16px" class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="doituong" id="doituong_0"
+                                          value="0">
+                                    Không thuộc đối tượng ưu tiên
+                              </label>
+                        </div>
+                  </form>
+                  <button id="ketquabai1" class="btn btn-success">Kết quả</button> <span id="conten_ketqua"></span>
+            </div>
+            <div class="tinh_tien_dien mt-5">
+                  <h3 class="alert alert-success">Bài tập tính tiền điện</h3>
+                  <form class="form-inline">
+                        <label for="name" class="mr-sm-2">Họ tên người sử dụng: </label>
+                        <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Enter your name"
+                              id="yourname">
+                        <label for="kw" class="mr-sm-2">Số Kw: </label>
+                        <input type="number" class="form-control mb-2 mr-sm-2" placeholder="Nhập số Kw đã tiêu thụ"
+                              id="kw">
+                        <button class="btn btn-primary mb-2">Tính</button>
+                  </form>
+                  <div id="output"></div>
+            </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

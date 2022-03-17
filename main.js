@@ -30,3 +30,86 @@ ketquabai1.onclick = function () {
   }
   conten_ketqua.innerHTML = ketqua;
 };
+
+// bài tập tính tiền điện
+const ketquabai2 = document.querySelector(".tinh_tien_dien .btn");
+ketquabai2.onclick = function (e) {
+  e.preventDefault();
+  const yourname = document.querySelector("#yourname").value;
+  const kw = document.querySelector("#kw").value * 1;
+  const id_output = document.querySelector("#output");
+  if (kw < 0) {
+    alert("Số kw tiêu thụ không hợp lệ");
+    return;
+  }
+  let tiendien;
+
+  switch (true) {
+    case kw <= 50:
+      tiendien = tiendien1_50(kw);
+      break;
+    case kw <= 100:
+      tiendien = tiendien1_50(kw) + tiendien50_100(kw);
+      break;
+    case kw <= 200:
+      tiendien = tiendien1_50(kw) + tiendien50_100(kw) + tiendien100_200(kw);
+      break;
+    case kw <= 350:
+      tiendien =
+        tiendien1_50(kw) +
+        tiendien50_100(kw) +
+        tiendien100_200(kw) +
+        tiendien200_350(kw);
+      break;
+    case kw > 350:
+      tiendien =
+        tiendien1_50(kw) +
+        tiendien50_100(kw) +
+        tiendien100_200(kw) +
+        tiendien200_350(kw) +
+        tiendien350_(kw);
+      break;
+    default:
+      alert("Số kw tiêu thụ không hợp lệ");
+  }
+  id_output.innerHTML =
+    "Quý khách " +
+    yourname +
+    " đã sử dụng " +
+    tiendien.toLocaleString("vi") +
+    "đ tiền điện.";
+};
+
+// tiền điện 50kw đầu tiên
+function tiendien1_50(kw) {
+  let tiendien1__50 = 0;
+  kw > 50 ? (tiendien1__50 = 50 * 500) : (tiendien1__50 = kw * 500);
+  return tiendien1__50;
+}
+// tiền điện từ 50 đến 100kw
+function tiendien50_100(kw) {
+  let tiendien50__100 = 0;
+  kw > 100 ? (tiendien50__100 = 50 * 650) : (tiendien50__100 = (kw - 50) * 650);
+  return tiendien50__100;
+}
+// tiền điện từ 100 đến 200kw
+function tiendien100_200(kw) {
+  let tiendien100_200 = 0;
+  kw > 200
+    ? (tiendien100_200 = 100 * 850)
+    : (tiendien100_200 = (kw - 100) * 850);
+  return tiendien100_200;
+}
+// tiền điện từ 200 đến 350kw
+function tiendien200_350(kw) {
+  let tiendien200_350 = 0;
+  kw > 350
+    ? (tiendien200_350 = 150 * 1100)
+    : (tiendien200_350 = (kw - 200) * 1100);
+  return tiendien200_350;
+}
+// tiền điện lớn hơn 350kw
+function tiendien350_(kw) {
+  let tiendien350_ = (kw - 350) * 1300;
+  return tiendien350_;
+}
